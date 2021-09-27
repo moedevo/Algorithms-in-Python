@@ -1,7 +1,7 @@
-Ordered lists of data (duplicates allowed) ==> use Arrays ex: array = [1,2,4,5,4]
-Unordered lists of data (duplicates not allowed) ==> use Set ex: new Set() set.add('Pizza')
-Key-Value pairs of data (Unordered) ==> use Object ex: {name: 'max' ,  age: 13}
-Key-Value pairs of data (Ordered Iterable) ==> use Map() ex: new Map() map.set('loc','germany')
+- Ordered lists of data (duplicates allowed) ==> use Arrays ex: array = [1,2,4,5,4]
+- Unordered lists of data (duplicates not allowed) ==> use Set ex: new Set() set.add('Pizza')
+- Key-Value pairs of data (Unordered) ==> use Object ex: {name: 'max' ,  age: 13}
+- Key-Value pairs of data (Ordered Iterable) ==> use Map() ex: new Map() map.set('loc','germany')
 
 Arrays: 
 - Indexed : means we can access an item by using its index number.
