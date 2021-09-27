@@ -4,6 +4,7 @@ What is a good code?
 - Code is Instructions we give to computer to do something.
 - Runtime: How long does it take to run a certain problem through a function or a task.
 
+```
 const array = ['Nemo']
 function findNemo (array) {
     for (let i = 0; i < array.length; i++) {
@@ -13,6 +14,7 @@ function findNemo (array) {
     };
 };
 findNemo(Nemo);
+```
 
 Big O Scalability 
 - Big O Notaition: is the language we use for talking how long an algorithm takes to run.
@@ -25,6 +27,7 @@ As We grow our input elements how many more operations we have to do.
 Bog O allows us to explain this concept.
 - Different functions has different Big O Complexity
 
+```
 const array = ['Nemo'] // Big O(1)
 // const everyOne = ['Nemo','Leo','Digo','Moe','Harmoney','David','Hassan'] // Big O(7)
 // const large = newArray(10000).fill('Nemo') // Big O(10000)
@@ -41,6 +44,7 @@ function findNemo (array) {
     // to show time performance it took to run the function
 };
 findNemo(Nemo);
+```
 
 - results are 0 and after many run tries it took 0.100000 
 - this will be different from CPU to others CPU + What programs do u run + what programming language u use and many factors
@@ -58,14 +62,15 @@ O(n) Linear Time
 
 O(1) Constant Time
     - No matter how many inputs are there : the function has only n operations : Constant Time 
-
+```
 const boxes = ['first','second','third','fourth','fifth'];
 function compressFirstBox(boxes){
     console.log(boxes[0]); // O(1) Constant Time
     console.log(boxes[1]); // O(2) Still Constant Time
 }
-
+```
 [Excersie]
+```
 function funChallenge(input) {
     let a = 1; // Big O(1)
     a = 50 + 3 // Big O(1)
@@ -82,8 +87,9 @@ funChallenge()
 // Calculating Big O Notation for the function 
 // Big O (3 + 4n)
 // Simplifying Big O => Big O(n)
-
+```
 [Excersie]
+```
 function anotherFunChallenge(input) {
     let a = 1; // Big O(1)
     let b = 2; // Big O(1)
@@ -103,9 +109,12 @@ anotherFunChallenge()
 // Calculating Big O Notation for the function 
 // Big O (4 + 5n)
 // Simplifying Big O => Big O(n)
+```
+
 Big O Rules
     - Rule 1 : Worst Case.
 
+```
 const array = ['Leo','Digo','Nemo','Moe','Harmoney','David','Hassan']
 function findNemo (array) {
     for (let i = 0; i < array.length; i++) {
@@ -116,15 +125,18 @@ function findNemo (array) {
     };
 };
 findNemo (array)
+```
 
 - break; will make our code more efficient because instead of looping through 
     the entire 7 items in the array then finding Nemo,
     We will just loop until we find Nemo and breaking the loop 'in this case only first 3 items'
 - Worst case will be if Nemo was the last item in the array 'in that case looping through the entire array'
-- The function has Big O(n) 
+- The function has Big O(n)
+
 Big O Rules
     - Rule 2 : Remove Constants.
 
+```
 function printFirstItemThenFirstHalfThenSayHi100Times(items){
     console.log(items[0]); //Big O(1)  //Logging the first item
 
@@ -142,11 +154,14 @@ function printFirstItemThenFirstHalfThenSayHi100Times(items){
 printFirstItemThenFirstHalfThenSayHi100Times(items);
 // Ignoring variables , assignments and small calculations for this function
 // Big O(1, n/2, 100) => Big O(n/2, 101) => Big O(n/2, 1) => Big O(n,1) => Big O(n) // Constants Removed
+```
+
 Big O Rules
     - Rule 3 : Different Terms For Inputs.
     - It means there are different inputs and for loops depend on these inputs separately. 
     - Big O(boxes+boxes2) => Big O (a+b)
 
+```
 function compressBoxesTwice (boxes,boxes2) {
     boxes.forEach(function(boxes){
         console.log(boxes);
@@ -155,9 +170,11 @@ function compressBoxesTwice (boxes,boxes2) {
         console.log(boxes);
     });
 };
+```
+
 O(n^2) Quadratic Time
     - 1 input : 2 operations 
- 
+```
 // Interview Question : Log all pairs of array
 const numbers = [1,2,3,4,5]
 
@@ -170,9 +187,11 @@ function arrayPairs (array) {
 };
 arrayPairs(numbers)
 // Big O(n * n) => Big O(n^2)
+```
+
 Big O Rules
     - Rule 4 : Drop Non Dominants 
-
+```
 function printAllNumbersThenAllPairSums(numbers){
     console.log('These are all numbers:')
     numbers.forEach(function(number){
@@ -188,6 +207,8 @@ function printAllNumbersThenAllPairSums(numbers){
 };
 printAllNumbersThenAllPairSums([1,2,3,4,5])
 // Big O(n + n ^ 2) => Drop the non dominant terms => Big O(n ^ 2)
+```
+
 - We have to write code that scale.
 - Think big about your code and what could happen in the future.
 - We use big O to measure why one data structure might be better than others.
@@ -221,6 +242,7 @@ Space Complexity
 - Adding Function Call.
 - Adding Allocations
 
+```
 function boooo(n) {
     for (let i = 0; i < n.length; i++) {
         console.log('booo')
@@ -239,7 +261,9 @@ function arrayOfHiNTimes(n) {
 }
 arrayOfHiNTimes(6)
 // Space Complexity : Big O(n) // Because we create data structure
+```
 [Excersie]
+```
 const tweets = ['hi', 'doing','la'];
 array[0]; // Big O(1)
 array[tweets.length-1]; // Big O(1)
